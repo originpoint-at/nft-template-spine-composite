@@ -1,0 +1,37 @@
+template: spine_composite
+engine: 0.1.0
+config:
+  mime: application/zip
+  scale: auto # auto / 0.33
+  view_size: # 控制 export.png
+    width: 512
+    height: 512
+  texture_size: # 控制 nft.png，导出纹理的buffer
+    width: 1024
+    height: 1024
+suites:
+  - name: hero
+    background: "#AE9B81" # "wgpu::Color::TRANSPARENT"
+    groups:
+      - slots: # 控制 foot_far foot_near foot_xx 必须来自于同一套skin
+          - "foot_far"
+          - "foot_near"
+      - slots:
+          - "hand_far"
+          - "hand_near"
+      - slots:
+          - "leg_lower_far"
+          - "leg_lower_near"
+  - name: doge
+    background: "#AE9B81" # "wgpu::Color::TRANSPARENT"
+    groups:
+      - slots: # 控制 foot_far foot_near foot_xx 必须来自于同一套skin
+          - "foot_far"
+          - "foot_near"
+      - slots:
+          - "hand_far"
+          - "hand_near"
+      - slots:
+          - "leg_lower_far"
+          - "leg_lower_near"
+
